@@ -5,6 +5,7 @@ This module for the [MagicMirror](https://github.com/MichMich/MagicMirror) give 
 ![Image of textclockline](textclock1.png)
 ![Image of textclockfielden](textclock2.png)
 ![Image of textclockfieldse](textclock3.png)
+![Image of textclockfieldse](textclock-id.png)
 
 
 ## Installation
@@ -40,11 +41,12 @@ git clone https://github.com/brobergp/MMM-TextClock.git # clone this repository
 
 ## Language support
 
-  as of 2017-04-27 :
-	English, Swedish, German and Dutch.
+  as of 2017-05-21 :
+	English, Swedish, German, Dutch, and Indonesian.
 
   German translation by garbleflux
   Dutch translation by pjkoeleman
+  Indonesian translation by slametps
 
 ## Configuration options
 

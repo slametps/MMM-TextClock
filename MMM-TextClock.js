@@ -28,7 +28,8 @@ Module.register("MMM-TextClock",{
 			  en: "translations/en.json",
 			  de: "translations/de.json",
 			  nl: "translations/nl.json",
-				sv: "translations/sv.json"
+				sv: "translations/sv.json",
+				id: "translations/id.json"
 		}
 	},
 
@@ -577,231 +578,451 @@ Module.register("MMM-TextClock",{
 			wrapper.appendChild(ul6);
 			wrapper.appendChild(ul7);
 		}
+    else if (config.language == "id") {
+      var ul1 = document.createElement("ul");
+      ul1.className = "ul1";
 
-			// Default English Layout
-			else {
-						var ul1 = document.createElement("ul");
-						ul1.className = "ul1";
+      var litis = document.createElement("li");
+      litis.className = "litis";
+      litis.style.cssText = this.config.marked;
+      litis.innerHTML = this.translate('ITIS');
 
-							var litis = document.createElement("li");
-							litis.className = "litis";
-							litis.style.cssText = this.config.marked;
-							litis.innerHTML = this.translate('ITIS');
+      var lhalf = document.createElement("li");
+      lhalf.className = "lhalf";
+      lhalf.innerHTML = this.translate('HALF');
 
-							var lhalf = document.createElement("li");
-							lhalf.className = "lhalf";
-							lhalf.innerHTML = this.translate('HALF');
+      var li1 = document.createElement("li");
+      li1.className = "li1";
+      li1.innerHTML = this.translate('ONE');
 
-							var liten = document.createElement("li");
-							liten.className = "liten";
-							liten.innerHTML = this.translate('TEN');
+      ul1.appendChild(litis);
+      ul1.appendChild(lhalf);
+      ul1.appendChild(li1);
 
-							ul1.appendChild(litis);
-							ul1.appendChild(lhalf);
-							ul1.appendChild(liten);
+      var ul2 = document.createElement("ul");
+      ul2.className = "ul2";
 
-						var ul2 = document.createElement("ul");
-						ul2.className = "ul2";
+      var li2 = document.createElement("li");
+      li2.className = "li2";
+      li2.innerHTML = this.translate('TWO');
 
-							var lquarter = document.createElement("li");
-							lquarter.className = "lquarter";
-							lquarter.innerHTML = this.translate('QUARTER');
+      var li3 = document.createElement("li");
+      li3.className = "li3";
+      li3.innerHTML = this.translate('THREE');
 
-							var litwenty = document.createElement("li");
-							litwenty.className = "litwenty";
-							litwenty.innerHTML = this.translate('TWENTY');
+      var li4 = document.createElement("li");
+      li4.className = "li4";
+      li4.innerHTML = this.translate('FOUR');
 
-							ul2.appendChild(lquarter);
-							ul2.appendChild(litwenty);
+      ul2.appendChild(li2);
+      ul2.appendChild(li3);
+      ul2.appendChild(li4);
 
-						var ul3 = document.createElement("ul");
-						ul3.className = "ul3";
+      var ul3 = document.createElement("ul");
+      ul3.className = "ul3";
 
-							var lifive = document.createElement("li");
-							lifive.className = "lifive";
-							lifive.innerHTML = this.translate('FIVE');
+      var li5 = document.createElement("li");
+      li5.className = "li5";
+      li5.innerHTML = this.translate('FIVE');
 
-							var liminutes = document.createElement("li");
-							liminutes.className = "liminutes";
-							liminutes.innerHTML = this.translate('MINUTES');
+      var li6 = document.createElement("li");
+      li6.className = "li6";
+      li6.innerHTML = this.translate('SIX');
 
-							var lto = document.createElement("li");
-							lto.className = "lto";
-							lto.innerHTML = this.translate('TO');
+      var li7 = document.createElement("li");
+      li7.className = "li7";
+      li7.innerHTML = this.translate('SEVEN');
 
-							ul3.appendChild(lifive);
-							ul3.appendChild(liminutes);
-							ul3.appendChild(lto);
+      ul3.appendChild(li5);
+      ul3.appendChild(li6);
+      ul3.appendChild(li7);
 
-						var ul4 = document.createElement("ul");
-						ul4.className = "ul4";
+      var ul4 = document.createElement("ul");
+      ul4.className = "ul4";
 
-							var lpast = document.createElement("li");
-							lpast.className = "lpast";
-							lpast.innerHTML = this.translate('PAST');
+      var li8 = document.createElement("li");
+      li8.className = "li8";
+      li8.innerHTML = this.translate('EIGHT');
 
-							var li2 = document.createElement("li");
-							li2.className = "li2";
-							li2.innerHTML = this.translate('TWO');
+      var li9 = document.createElement("li");
+      li9.className = "li9";
+      li9.innerHTML = this.translate('NINE');
 
-							var li3 = document.createElement("li");
-							li3.className = "li3";
-							li3.innerHTML = this.translate('THREE');
+      var li10 = document.createElement("li");
+      li10.className = "li10";
+      li10.innerHTML = this.translate('TEN');
 
-							ul4.appendChild(lpast);
-							ul4.appendChild(li2);
-							ul4.appendChild(li3);
+      ul4.appendChild(li8);
+      ul4.appendChild(li9);
+      ul4.appendChild(li10);
 
-						var ul5 = document.createElement("ul");
-						ul5.className = "ul5";
+      var ul5 = document.createElement("ul");
+      ul5.className = "ul5";
 
-							var li1 = document.createElement("li");
-							li1.className = "li1";
-							li1.innerHTML = this.translate('ONE');
+      var li11 = document.createElement("li");
+      li11.className = "li11";
+      li11.innerHTML = this.translate('ELEVEN');
 
-							var li4 = document.createElement("li");
-							li4.className = "li4";
-							li4.innerHTML = this.translate('FOUR');
+      var li12 = document.createElement("li");
+      li12.className = "li12";
+      li12.innerHTML = this.translate('TWELVE');
 
-							var li5 = document.createElement("li");
-							li5.className = "li5";
-							li5.innerHTML = this.translate('FIVE');
+      var lto = document.createElement("li");
+      lto.className = "lto";
+      lto.innerHTML = this.translate('TO');
 
-							ul5.appendChild(li1);
-							ul5.appendChild(li4);
-							ul5.appendChild(li5);
+      ul5.appendChild(li11);
+      ul5.appendChild(li12);
+      ul5.appendChild(lto);
 
-						var ul6 = document.createElement("ul");
-						ul6.className = "ul6";
+      var ul6 = document.createElement("ul");
+      ul6.className = "ul6";
 
-							var li6 = document.createElement("li");
-							li6.className = "li6";
-							li6.innerHTML = this.translate('SIX');
+      var lpast = document.createElement("li");
+      lpast.className = "lpast";
+      lpast.innerHTML = this.translate('PAST');
 
-							var li7 = document.createElement("li");
-							li7.className = "li7";
-							li7.innerHTML = this.translate('SEVEN');
+      var litwenty = document.createElement("li");
+      litwenty.className = "litwenty";
+      litwenty.innerHTML = this.translate('TWENTY');
 
-							var li8 = document.createElement("li");
-							li8.className = "li8";
-							li8.innerHTML = this.translate('EIGHT');
+      var liten = document.createElement("li");
+      liten.className = "liten";
+      liten.innerHTML = this.translate('TEN');
 
-							ul6.appendChild(li6);
-							ul6.appendChild(li7);
-							ul6.appendChild(li8);
+      ul6.appendChild(lpast);
+      ul6.appendChild(litwenty);
+      ul6.appendChild(liten);
 
-						var ul7 = document.createElement("ul");
-						ul7.className = "ul7";
+      var ul7 = document.createElement("ul");
+      ul7.className = "ul7";
 
-							var li9 = document.createElement("li");
-							li9.className = "li9";
-							li9.innerHTML = this.translate('NINE');
+      var lquarter = document.createElement("li");
+      lquarter.className = "lquarter";
+      lquarter.innerHTML = this.translate('QUARTER');
 
-							var li10 = document.createElement("li");
-							li10.className = "li10";
-							li10.innerHTML = this.translate('TEN');
+      var lifive = document.createElement("li");
+      lifive.className = "lifive";
+      lifive.innerHTML = this.translate('FIVE');
 
-							var li11 = document.createElement("li");
-							li11.className = "li11";
-							li11.innerHTML = this.translate('ELEVEN');
+      ul7.appendChild(lquarter);
+      ul7.appendChild(lifive);
 
-							ul7.appendChild(li9);
-							ul7.appendChild(li10);
-							ul7.appendChild(li11);
+      var ul8 = document.createElement("ul");
+      ul8.className = "ul8";
 
-						var ul8 = document.createElement("ul");
-						ul8.className = "ul8";
+      var liminutes = document.createElement("li");
+      liminutes.className = "liminutes";
+      liminutes.innerHTML = this.translate('MINUTES');
 
-							var li12 = document.createElement("li");
-							li12.className = "li12";
-							li12.innerHTML = this.translate('TWELVE');
+      var lioclock = document.createElement("li");
+      lioclock.className = "liocklock";
+      lioclock.innerHTML = this.translate('OCLOCK');
 
-							var lioclock = document.createElement("li");
-							lioclock.className = "liocklock";
-							lioclock.innerHTML = this.translate('OCLOCK');
+      ul8.appendChild(liminutes);
+      ul8.appendChild(lioclock);
 
-							ul8.appendChild(li12);
-							ul8.appendChild(lioclock);
+      if (timeMinute >= 25 ) {
+        nowplus = moment().add(1, 'h');
+        timeHour = nowplus.format('h');
+        eval("li" + timeHour).style.cssText = this.config.marked;
+      }
+      else {
+        eval("li" + timeHour).style.cssText = this.config.marked;
+      }
 
-							if (timeMinute  >= 25 ) {
-								nowplus = moment().add(1, 'h');
-								timeHour = nowplus.format('h');
-								eval("li" + timeHour).style.cssText = this.config.marked;
-							}
-							else {
-								eval("li" + timeHour).style.cssText = this.config.marked;
-						}
+      if (timeMinute >= 0 && timeMinute < 5) {
+        lioclock.style.cssText = this.config.marked;
+      }
 
-						if (timeMinute >= 0 && timeMinute < 5) {
-							lioclock.style.cssText = this.config.marked;
-						}
+      else if (timeMinute >= 5 && timeMinute < 10) {
+        lifive.style.cssText = this.config.marked;
+        liminutes.style.cssText = this.config.marked;
+        lpast.style.cssText = this.config.marked;
+      }
+      else if (timeMinute >= 10 && timeMinute < 15) {
+        liten.style.cssText = this.config.marked;
+        liminutes.style.cssText = this.config.marked;
+        lpast.style.cssText = this.config.marked;
+      }
+      else if (timeMinute >= 15 && timeMinute < 20) {
+        lquarter.style.cssText = this.config.marked;
+        lpast.style.cssText = this.config.marked;
+      }
+      else if (timeMinute >= 20 && timeMinute < 25) {
+        litwenty.style.cssText = this.config.marked;
+        liminutes.style.cssText = this.config.marked;
+        lpast.style.cssText = this.config.marked;
+      }
+      else if (timeMinute >= 25 && timeMinute < 30) {
+        litwenty.style.cssText = this.config.marked;
+        lifive.style.cssText = this.config.marked
+        liminutes.style.cssText = this.config.marked;
+        lpast.style.cssText = this.config.marked;
+      }
+      else if (timeMinute >= 30 && timeMinute < 35) {
+        lhalf.style.cssText = this.config.marked;
+      }
+      else if (timeMinute >= 35 && timeMinute < 40) {
+        litwenty.style.cssText = this.config.marked;
+        lifive.style.cssText = this.config.marked;
+        liminutes.style.cssText = this.config.marked;
+        lto.style.cssText = this.config.marked;
+      }
+      else if (timeMinute >= 40 && timeMinute < 45) {
+        litwenty.style.cssText = this.config.marked;
+        liminutes.style.cssText = this.config.marked;
+        lto.style.cssText = this.config.marked;
+      }
+      else if (timeMinute >= 45 && timeMinute < 50) {
+        lquarter.style.cssText = this.config.marked;
+        lto.style.cssText = this.config.marked;
+      }
+      else if (timeMinute >= 50 && timeMinute < 55) {
+        liten.style.cssText = this.config.marked;
+        liminutes.style.cssText = this.config.marked;
+        lto.style.cssText = this.config.marked;
+      }
+      else if (timeMinute >= 55 && timeMinute < 60) {
+        lifive.style.cssText = this.config.marked;
+        liminutes.style.cssText = this.config.marked;
+        lto.style.cssText = this.config.marked;
+      }
+      else {}
 
-						else if (timeMinute >= 5 && timeMinute < 10) {
-							lifive.style.cssText = this.config.marked;
-						  liminutes.style.cssText = this.config.marked;
-							lpast.style.cssText = this.config.marked;
-						}
-						else if (timeMinute >= 10 && timeMinute < 15) {
-							liten.style.cssText = this.config.marked;
-							liminutes.style.cssText = this.config.marked;
-							lpast.style.cssText = this.config.marked;
-						}
-						else if (timeMinute >= 15 && timeMinute < 20) {
-							lquarter.style.cssText = this.config.marked;
-							lpast.style.cssText = this.config.marked;
-						}
-						else if (timeMinute >= 20 && timeMinute < 25) {
-							litwenty.style.cssText = this.config.marked;
-							liminutes.style.cssText = this.config.marked;
-							lpast.style.cssText = this.config.marked;
-						}
-						else if (timeMinute >= 25 && timeMinute < 30) {
-							litwenty.style.cssText = this.config.marked;
-							lifive.style.cssText = this.config.marked
-							liminutes.style.cssText = this.config.marked;
-							lpast.style.cssText = this.config.marked;
-						}
-						else if (timeMinute >= 30 && timeMinute < 35) {
-							lhalf.style.cssText = this.config.marked;
-						}
-						else if (timeMinute >= 35 && timeMinute < 40) {
-							litwenty.style.cssText = this.config.marked;
-							lifive.style.cssText = this.config.marked;
-							liminutes.style.cssText = this.config.marked;
-							lto.style.cssText = this.config.marked;
-						}
-						else if (timeMinute >= 40 && timeMinute < 45) {
-							litwenty.style.cssText = this.config.marked;
-							liminutes.style.cssText = this.config.marked;
-							lto.style.cssText = this.config.marked;
-						}
-						else if (timeMinute >= 45 && timeMinute < 50) {
-							lquarter.style.cssText = this.config.marked;
-							lto.style.cssText = this.config.marked;
-						}
-						else if (timeMinute >= 50 && timeMinute < 55) {
-							liten.style.cssText = this.config.marked;
-							liminutes.style.cssText = this.config.marked;
-							lto.style.cssText = this.config.marked;
-						}
-						else if (timeMinute >= 55 && timeMinute < 60) {
-							lifive.style.cssText = this.config.marked;
-							liminutes.style.cssText = this.config.marked;
-							lto.style.cssText = this.config.marked;
-						}
-						else {}
+      wrapper.appendChild(ul1);
+      wrapper.appendChild(ul2);
+      wrapper.appendChild(ul3);
+      wrapper.appendChild(ul4);
+      wrapper.appendChild(ul5);
+      wrapper.appendChild(ul6);
+      wrapper.appendChild(ul7);
+      wrapper.appendChild(ul8);
+    }
+    // Default English Layout
+    else {
+          var ul1 = document.createElement("ul");
+          ul1.className = "ul1";
 
-						wrapper.appendChild(ul1);
-						wrapper.appendChild(ul2);
-						wrapper.appendChild(ul3);
-						wrapper.appendChild(ul4);
-						wrapper.appendChild(ul5);
-						wrapper.appendChild(ul6);
-						wrapper.appendChild(ul7);
-						wrapper.appendChild(ul8);
-					}
+            var litis = document.createElement("li");
+            litis.className = "litis";
+            litis.style.cssText = this.config.marked;
+            litis.innerHTML = this.translate('ITIS');
 
-			}
+            var lhalf = document.createElement("li");
+            lhalf.className = "lhalf";
+            lhalf.innerHTML = this.translate('HALF');
+
+            var liten = document.createElement("li");
+            liten.className = "liten";
+            liten.innerHTML = this.translate('TEN');
+
+            ul1.appendChild(litis);
+            ul1.appendChild(lhalf);
+            ul1.appendChild(liten);
+
+          var ul2 = document.createElement("ul");
+          ul2.className = "ul2";
+
+            var lquarter = document.createElement("li");
+            lquarter.className = "lquarter";
+            lquarter.innerHTML = this.translate('QUARTER');
+
+            var litwenty = document.createElement("li");
+            litwenty.className = "litwenty";
+            litwenty.innerHTML = this.translate('TWENTY');
+
+            ul2.appendChild(lquarter);
+            ul2.appendChild(litwenty);
+
+          var ul3 = document.createElement("ul");
+          ul3.className = "ul3";
+
+            var lifive = document.createElement("li");
+            lifive.className = "lifive";
+            lifive.innerHTML = this.translate('FIVE');
+
+            var liminutes = document.createElement("li");
+            liminutes.className = "liminutes";
+            liminutes.innerHTML = this.translate('MINUTES');
+
+            var lto = document.createElement("li");
+            lto.className = "lto";
+            lto.innerHTML = this.translate('TO');
+
+            ul3.appendChild(lifive);
+            ul3.appendChild(liminutes);
+            ul3.appendChild(lto);
+
+          var ul4 = document.createElement("ul");
+          ul4.className = "ul4";
+
+            var lpast = document.createElement("li");
+            lpast.className = "lpast";
+            lpast.innerHTML = this.translate('PAST');
+
+            var li2 = document.createElement("li");
+            li2.className = "li2";
+            li2.innerHTML = this.translate('TWO');
+
+            var li3 = document.createElement("li");
+            li3.className = "li3";
+            li3.innerHTML = this.translate('THREE');
+
+            ul4.appendChild(lpast);
+            ul4.appendChild(li2);
+            ul4.appendChild(li3);
+
+          var ul5 = document.createElement("ul");
+          ul5.className = "ul5";
+
+            var li1 = document.createElement("li");
+            li1.className = "li1";
+            li1.innerHTML = this.translate('ONE');
+
+            var li4 = document.createElement("li");
+            li4.className = "li4";
+            li4.innerHTML = this.translate('FOUR');
+
+            var li5 = document.createElement("li");
+            li5.className = "li5";
+            li5.innerHTML = this.translate('FIVE');
+
+            ul5.appendChild(li1);
+            ul5.appendChild(li4);
+            ul5.appendChild(li5);
+
+          var ul6 = document.createElement("ul");
+          ul6.className = "ul6";
+
+            var li6 = document.createElement("li");
+            li6.className = "li6";
+            li6.innerHTML = this.translate('SIX');
+
+            var li7 = document.createElement("li");
+            li7.className = "li7";
+            li7.innerHTML = this.translate('SEVEN');
+
+            var li8 = document.createElement("li");
+            li8.className = "li8";
+            li8.innerHTML = this.translate('EIGHT');
+
+            ul6.appendChild(li6);
+            ul6.appendChild(li7);
+            ul6.appendChild(li8);
+
+          var ul7 = document.createElement("ul");
+          ul7.className = "ul7";
+
+            var li9 = document.createElement("li");
+            li9.className = "li9";
+            li9.innerHTML = this.translate('NINE');
+
+            var li10 = document.createElement("li");
+            li10.className = "li10";
+            li10.innerHTML = this.translate('TEN');
+
+            var li11 = document.createElement("li");
+            li11.className = "li11";
+            li11.innerHTML = this.translate('ELEVEN');
+
+            ul7.appendChild(li9);
+            ul7.appendChild(li10);
+            ul7.appendChild(li11);
+
+          var ul8 = document.createElement("ul");
+          ul8.className = "ul8";
+
+            var li12 = document.createElement("li");
+            li12.className = "li12";
+            li12.innerHTML = this.translate('TWELVE');
+
+            var lioclock = document.createElement("li");
+            lioclock.className = "liocklock";
+            lioclock.innerHTML = this.translate('OCLOCK');
+
+            ul8.appendChild(li12);
+            ul8.appendChild(lioclock);
+
+            if (timeMinute  >= 25 ) {
+              nowplus = moment().add(1, 'h');
+              timeHour = nowplus.format('h');
+              eval("li" + timeHour).style.cssText = this.config.marked;
+            }
+            else {
+              eval("li" + timeHour).style.cssText = this.config.marked;
+          }
+
+          if (timeMinute >= 0 && timeMinute < 5) {
+            lioclock.style.cssText = this.config.marked;
+          }
+
+          else if (timeMinute >= 5 && timeMinute < 10) {
+            lifive.style.cssText = this.config.marked;
+            liminutes.style.cssText = this.config.marked;
+            lpast.style.cssText = this.config.marked;
+          }
+          else if (timeMinute >= 10 && timeMinute < 15) {
+            liten.style.cssText = this.config.marked;
+            liminutes.style.cssText = this.config.marked;
+            lpast.style.cssText = this.config.marked;
+          }
+          else if (timeMinute >= 15 && timeMinute < 20) {
+            lquarter.style.cssText = this.config.marked;
+            lpast.style.cssText = this.config.marked;
+          }
+          else if (timeMinute >= 20 && timeMinute < 25) {
+            litwenty.style.cssText = this.config.marked;
+            liminutes.style.cssText = this.config.marked;
+            lpast.style.cssText = this.config.marked;
+          }
+          else if (timeMinute >= 25 && timeMinute < 30) {
+            litwenty.style.cssText = this.config.marked;
+            lifive.style.cssText = this.config.marked
+            liminutes.style.cssText = this.config.marked;
+            lpast.style.cssText = this.config.marked;
+          }
+          else if (timeMinute >= 30 && timeMinute < 35) {
+            lhalf.style.cssText = this.config.marked;
+          }
+          else if (timeMinute >= 35 && timeMinute < 40) {
+            litwenty.style.cssText = this.config.marked;
+            lifive.style.cssText = this.config.marked;
+            liminutes.style.cssText = this.config.marked;
+            lto.style.cssText = this.config.marked;
+          }
+          else if (timeMinute >= 40 && timeMinute < 45) {
+            litwenty.style.cssText = this.config.marked;
+            liminutes.style.cssText = this.config.marked;
+            lto.style.cssText = this.config.marked;
+          }
+          else if (timeMinute >= 45 && timeMinute < 50) {
+            lquarter.style.cssText = this.config.marked;
+            lto.style.cssText = this.config.marked;
+          }
+          else if (timeMinute >= 50 && timeMinute < 55) {
+            liten.style.cssText = this.config.marked;
+            liminutes.style.cssText = this.config.marked;
+            lto.style.cssText = this.config.marked;
+          }
+          else if (timeMinute >= 55 && timeMinute < 60) {
+            lifive.style.cssText = this.config.marked;
+            liminutes.style.cssText = this.config.marked;
+            lto.style.cssText = this.config.marked;
+          }
+          else {}
+
+          wrapper.appendChild(ul1);
+          wrapper.appendChild(ul2);
+          wrapper.appendChild(ul3);
+          wrapper.appendChild(ul4);
+          wrapper.appendChild(ul5);
+          wrapper.appendChild(ul6);
+          wrapper.appendChild(ul7);
+          wrapper.appendChild(ul8);
+        }
+
+    }
 
 		else { wrapper.innerHTML = "something is wrong"; }
 
